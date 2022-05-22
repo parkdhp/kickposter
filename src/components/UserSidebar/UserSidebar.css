@@ -1,0 +1,27 @@
+.User-sidebar {
+  width: 13%;
+  margin-left: 20px;
+}
+
+.Sidebar-item {
+  padding: 10px;
+  color: darkslategrey;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.Sidebar-item-link {
+  padding: 10px;
+  color: darkslategrey;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.Sidebar-item-link:hover {
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.logo {
+  width: 125px;
+  height: 125px;
+}
