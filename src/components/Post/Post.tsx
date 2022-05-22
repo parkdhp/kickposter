@@ -2,6 +2,7 @@ import React from "react";
 import { Post } from "../../types";
 import TimeSince from "../TimeSince/TimeSince";
 import "./Post.css";
+import Likes from "../Likes/Likes";
 
 const PostBox: React.FC<Post> = (post: Post) => {
   return (
@@ -18,9 +19,9 @@ const PostBox: React.FC<Post> = (post: Post) => {
       </div>
       <p></p>
       <p>{post.text}</p>
-      {/* This is where the Likes example would go! 
-        This will be implemented by the instructor, 
-        but feel free to try on your own! */}
+      <p>
+        <Likes count={post.likeCount} postId={post.id} />
+      </p>
     </div>
   );
 };

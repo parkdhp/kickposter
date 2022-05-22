@@ -101,19 +101,18 @@ type Props = {
 };
 
 const TimeSince: React.FC<Props> = (props) => {
-  /*
-    This is where our time since component would go! But for now, it's just an empty div.
-    This example will be done by the instructor, but feel free to try it out on your own.
-  */
-  return <div></div>
+  const dateOfPost = props.date;
+  const millisecondsSince = dateOfPost.getTime() - new Date().getTime();
+  return <span className="TimeSince">{formatedMs(millisecondsSince)}</span>
 };
 
 const TimeSinceWebComponent: React.FC<Props> = (props) => {
-  /*
-    Same as above, this would be a TimeSince component, but as an import.
-    For now though, nothing here!
-  */
-  return <div></div>
+  return (
+      <span className="TimeSince">
+        {/* @ts-ignore */}
+        <time-ago datetime={props.date.toISOString()}/>
+      </span>
+  )
 };
 
-export default TimeSince;
+export default TimeSinceWebComponent;

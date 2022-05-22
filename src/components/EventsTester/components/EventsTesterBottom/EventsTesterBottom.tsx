@@ -26,7 +26,7 @@ const EventsTesterBottom: React.FC = () => {
 
   const onRightClick = (event: Event) => {
     console.log("Right Clicking on Bottom");
-    event.preventDefault();
+    // event.preventDefault();
     event.stopPropagation();
   };
   return (

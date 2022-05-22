@@ -24,7 +24,7 @@ const EventsTesterContainer: React.FC = () => {
 
   const onCapture = (event: Event) => {
     console.log("Capturing Click at container");
-    event.stopPropagation();
+    // event.stopPropagation();
   };
   const onBubble = (event: Event) => {
     alert("We shouldn't be bubbling, we stopped at capture");
